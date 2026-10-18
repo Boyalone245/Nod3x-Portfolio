@@ -1,0 +1,392 @@
+/* ==============================
+   GENERAL PAGE STYLING
+================================= */
+
+body {
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0B0F10;
+
+    color: #F5F5F5;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #E8D0B0;
+    text-decoration: none;
+}
+
+
+/* ==============================
+   MAIN HEADER
+================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1002;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+
+    background-color: rgba(17, 21, 22, 0.95);
+    border-bottom: 0.5px solid #292E30;
+}
+
+
+/* LEFT HEADER: LOGO */
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+
+/* RIGHT HEADER: MENU BUTTON */
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+#menuButton {
+    position: relative;
+    z-index: 1002;
+
+    background: none;
+    border: none;
+
+    color: #F5F5F5;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   SIDEBAR NAVIGATION
+================================= */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    z-index: 1001;
+
+    width: 250px;
+    height: 50vh;
+
+    margin: 0;
+    padding: 80px 20px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+
+    list-style: none;
+
+    background-color: rgba(17, 21, 22, 0.85);
+
+    transition: right 0.3s ease;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar li {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar a {
+    color: #F5F5F5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #E8D0B0;
+}
+
+
+/* LET'S TALK BUTTON */
+
+.talk-button {
+    display: inline-block;
+
+    background-color: #E8D0B0;
+    color: #111516;
+
+    padding: 12px 24px;
+    border-radius: 6px;
+
+    text-decoration: none;
+}
+
+.talk-button:hover {
+    background-color: #D8C3A5;
+}
+
+
+/* ==============================
+   PAGE TITLE
+================================= */
+
+.page-title {
+    padding: 0 40px;
+}
+
+
+/* ==============================
+   UPPER / INTRODUCTION SECTION
+================================= */
+
+.upper {
+    position: relative;
+    isolation: isolate;
+
+    min-height: 400px;
+    padding: 40px;
+
+    color: #D8C3A5;
+}
+
+.upper::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/upperpage.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.upper h1 {
+    color: #E8D0B0;
+}
+
+.upper p {
+    color: #C5C9CC;
+}
+
+
+/* ==============================
+   FOOTER / PROJECT HIGHLIGHTS
+================================= */
+
+.footer nav ul {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    flex-wrap: wrap;
+}
+
+.footer nav ul li {
+    flex: 1 1 250px;
+
+    max-width: 350px;
+    min-width: 0;
+    height: 200px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-indent: -9999px;
+
+    opacity: 0.8;
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer-item-1 {
+    background-image: url("images/hilight3.png");
+}
+
+.footer-item-2 {
+    background-image: url("images/hilight1.png");
+}
+
+.footer-item-3 {
+    background-image: url("images/highlight4.png");
+}
+
+.footer-item-4 {
+    background-image: url("images/hilight4.png");
+}
+
+
+/* ==============================
+   ABOUT SECTION
+================================= */
+
+.about {
+    color: #FFC402;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: rgba(17, 21, 22, 0.5);
+    background-image: url("images/about1.png");
+
+    opacity: 0.8;
+
+    padding: 40px 20px;
+    width: 100%;
+    height: 600px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   CONTACT LINKS SECTION
+================================= */
+
+.ContactLinks {
+    background-color: rgba(17, 21, 22, 0.5);
+
+    padding: 40px 20px;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.ContactLinks nav ul {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    flex-wrap: wrap;
+}
+
+.ContactLinks nav ul li {
+    width: 140px;
+    height: 140px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    flex-shrink: 0;
+}
+
+.ContactLinks nav ul li a {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 0;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* SOCIAL MEDIA ICON BACKGROUNDS */
+
+.Whatsapp {
+    background-image: url("images/WhatsApp.png");
+}
+
+.Discord {
+    background-image: url("images/Discord.png");
+}
+
+.X {
+    background-image: url("images/X.png");
+}
+
+
+/* SOCIAL ICON HOVER ANIMATION */
+
+.ContactLinks nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 10px 15px;
+    }
+
+    .header img {
+        width: 80px;
+    }
+
+    .upper {
+        padding: 25px 20px;
+        min-height: 350px;
+    }
+
+    .footer nav ul li {
+        flex-basis: 100%;
+        max-width: 350px;
+    }
+
+    .ContactLinks nav ul {
+        gap: 10px;
+    }
+
+    .ContactLinks nav ul li {
+        width: 100px;
+        height: 100px;
+    }
+
+    .page-title {
+        padding: 0 20px;
+    }
+
+}
