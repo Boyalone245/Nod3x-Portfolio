@@ -57,7 +57,46 @@ a {
 
 
 /* RIGHT HEADER: MENU BUTTON */
+#menuButton {
+      width: 45px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+/* All three bars */
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.2s ease;
+}
+
+/* Top bar */
+#menuButton.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+/* Middle bar */
+#menuButton.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+/* Bottom bar */
+#menuButton.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
 .menu {
     display: flex;
     align-items: center;

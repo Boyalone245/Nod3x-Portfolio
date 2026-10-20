@@ -7,10 +7,11 @@ const menuButton = document.getElementById("menuButton");
 
 // Open and close the sidebar
 function toggleMenu() {
-
     if (!menu || !menuButton) return;
 
     const isOpen = menu.classList.toggle("active");
+
+    menuButton.classList.toggle("active", isOpen);
 
     menuButton.setAttribute("aria-expanded", isOpen);
 }
@@ -18,10 +19,10 @@ function toggleMenu() {
 
 // Close the sidebar
 function closeMenu() {
-
     if (!menu || !menuButton) return;
 
     menu.classList.remove("active");
+    menuButton.classList.remove("active");
 
     menuButton.setAttribute("aria-expanded", "false");
 }
